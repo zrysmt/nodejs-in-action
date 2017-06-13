@@ -1,0 +1,34 @@
+{
+  "name": "3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callback_example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "basic-auth": "^1.1.0",
+    "basic-auth-connect": "^1.0.0",
+    "body-parser": "^1.17.2",
+    "connect": "^3.6.2",
+    "cookie-parser": "^1.4.3",
+    "curl": "^0.1.4",
+    "events": "^1.1.1",
+    "express-session": "^1.15.3",
+    "fs": "^0.0.1-security",
+    "htmlparser": "^1.7.7",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
+    "net": "^1.0.2",
+    "nimble": "^0.0.2",
+    "querystring": "^0.2.0",
+    "raw-body": "^2.2.0",
+    "request": "^2.81.0",
+    "serve-favicon": "^2.4.3",
+    "util": "^0.10.3"
+  }
+}
