@@ -33,7 +33,7 @@ if ('development' == app.get('env')) {
 app.get('/users', user.list);
 app.get('/', photos.list);
 app.get('/upload', photos.form);
-app.post('/upload', photos.submit(app.get('photos')));
+app.post('/upload', photos.submit(app.get('photos')));  //app.get('photos')就是一个路径
 app.get('/photo/:id/download', photos.download(app.get('photos')));
 
 
