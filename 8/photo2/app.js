@@ -36,7 +36,7 @@ if ('development' == app.get('env')) {         //开发模式下
 app.get('/', photos.list);                    //指定程序路由
 app.get('/users', user.list);                  //指定程序路由
 app.get('/upload',photos.form);
-// app.get('/upload',photos.submit(app.get('photos')));
+app.get('/upload',photos.submit(app.get('photos')));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

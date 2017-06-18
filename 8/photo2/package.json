@@ -6,10 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "ejs": "*",
     "express": "3.5.0",
-    "ejs": "*"
+    "mongoose": "^3.6.19"
   },
-  "devDependencies": {
-    "mongoose": "^4.10.6"
-  }
+  "devDependencies": {}
 }
