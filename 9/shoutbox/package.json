@@ -10,5 +10,8 @@
     "ejs": "*",
     "bcrypt": "0.7.3",
     "redis": "0.7.2"
+  },
+  "devDependencies": {
+    "bcrypt-nodejs": "^0.0.3"
   }
 }

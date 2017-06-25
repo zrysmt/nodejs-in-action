@@ -12,7 +12,7 @@ exports.submit = function(req, res, next){
       req.session.uid = user.id;
       res.redirect('/');
     } else {
-      res.error("Sorry! invalid credentials.");
+      res.error("Sorry! invalid credentials.错误认证");
       res.redirect('back');
     }
   });

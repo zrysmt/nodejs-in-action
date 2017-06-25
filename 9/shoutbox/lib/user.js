@@ -1,5 +1,6 @@
 var redis = require('redis');
-var bcrypt = require('bcrypt');
+// var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 var db = redis.createClient();
 
 module.exports = User;
@@ -42,7 +43,7 @@ User.prototype.hashPassword = function(fn){
   bcrypt.genSalt(12, function(err, salt){
     if (err) return fn(err);
     user.salt = salt;
-    bcrypt.hash(user.pass, salt, function(err, hash){
+    bcrypt.hash(user.pass, salt, function(){},function(err, hash){
       if (err) return fn(err);
       user.pass = hash;
       fn();
@@ -85,7 +86,7 @@ User.authenticate = function(name, pass, fn){
   User.getByName(name, function(err, user){
     if (err) return fn(err);
     if (!user.id) return fn();
-    bcrypt.hash(pass, user.salt, function(err, hash){
+    bcrypt.hash(pass, user.salt,function(){}, function(err, hash){
       if (err) return fn(err);
       if (hash == user.pass) return fn(null, user);
       fn();
