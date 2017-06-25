@@ -12,7 +12,7 @@ function Entry(obj) {
 Entry.prototype.save = function(fn){
   var entryJSON = JSON.stringify(this);
 
-  db.lpush(
+  db.lpush(                         //将JSON字符串保存到Redis列表中
     'entries',
     entryJSON,
     function(err) {
@@ -21,7 +21,7 @@ Entry.prototype.save = function(fn){
     }
   );
 };
-
+//获取消息
 Entry.getRange = function(from, to, fn){
   db.lrange('entries', from, to, function(err, items){
     if (err) return fn(err);

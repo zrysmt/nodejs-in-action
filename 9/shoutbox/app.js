@@ -49,7 +49,7 @@ app.get('/logout', login.logout);
 app.get('/post', entries.form);
 app.post(
    '/post',
-   validate.required('entry[title]'),
+   validate.required('entry[title]'),         //用特定路由实现表单校验
    validate.lengthAbove('entry[title]', 4),
    entries.submit
 );
