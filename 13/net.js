@@ -1,5 +1,6 @@
+//创建TCP服务器
 //node net.js
-//telnet localhost 1337
+//连接 telnet localhost 1337
 
 var net = require('net');
 
