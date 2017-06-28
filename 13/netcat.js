@@ -1,3 +1,6 @@
+//创建TCP客户端
+//node netcat.js towel.blinkenlights.nl 23
+
 var net = require('net');
 var host = process.argv[2];
 var port = Number(process.argv[3]);

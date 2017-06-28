@@ -1,3 +1,6 @@
+//node echo_server.js
+//telnet localhost 1337
+
 var net = require('net');
 
 net.createServer(function (socket) {
